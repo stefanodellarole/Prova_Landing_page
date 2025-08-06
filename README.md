@@ -368,6 +368,11 @@ npm run type-check
 npm run lint
 ```
 
+**4. Errore "Dynamic require is not supported"**
+- Problema risolto: Il vite.config.ts ora usa solo ESM imports
+- PostCSS configurato in file separato (postcss.config.js)
+- Compatibilità Lovable garantita
+
 ### Contatti
 
 - 📧 **Email**: info@splinter.ch

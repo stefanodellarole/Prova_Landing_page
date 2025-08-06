@@ -14,14 +14,7 @@ export default defineConfig({
       "@/utils": path.resolve(__dirname, "./utils")
     },
   },
-  css: {
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-      ],
-    },
-  },
+
   server: {
     port: 3000,
     host: true,
