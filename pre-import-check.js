@@ -59,10 +59,11 @@ try {
   // Check Vite configuration
   try {
     const viteConfig = fs.readFileSync('vite.config.ts', 'utf8');
-    const hasESMImports = viteConfig.includes('import tailwindcss') && viteConfig.includes('import autoprefixer');
+    const hasPort8080 = viteConfig.includes('port: 8080');
+    const hasPostCSS = viteConfig.includes('postcss:');
     const hasRequire = viteConfig.includes('require(');
-    addCheck('Vite config (ES6)', hasESMImports && !hasRequire, 
-      hasESMImports ? 'Uses ES6 imports for PostCSS' : 'Missing ES6 imports for PostCSS plugins');
+    addCheck('Vite config (Clean)', hasPort8080 && !hasPostCSS && !hasRequire, 
+      hasPort8080 ? 'Clean ESM config with port 8080' : 'Missing port 8080 or has PostCSS config');
   } catch (error) {
     addCheck('Vite config file', false, 'vite.config.ts not found');
   }
