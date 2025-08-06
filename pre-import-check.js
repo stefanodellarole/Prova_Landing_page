@@ -54,6 +54,7 @@ try {
   addCheck('TypeScript', !!packageJson.devDependencies?.typescript, packageJson.devDependencies?.typescript || 'Missing');
   addCheck('Vite', !!packageJson.devDependencies?.vite, packageJson.devDependencies?.vite || 'Missing');
   addCheck('Tailwind CSS', !!packageJson.devDependencies?.tailwindcss, packageJson.devDependencies?.tailwindcss || 'Missing');
+  addCheck('Build:dev script', !!packageJson.scripts?.['build:dev'], packageJson.scripts?.['build:dev'] || 'Missing - required for Lovable');
   
 } catch (error) {
   addCheck('Package.json parse', false, 'Invalid JSON');

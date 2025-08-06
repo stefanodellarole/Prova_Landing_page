@@ -109,10 +109,15 @@ npm run preview      # Preview della build di produzione
 
 # Build
 npm run build        # Build per produzione
+npm run build:dev    # Build per sviluppo (required by Lovable)
 npm run type-check   # Controllo TypeScript
 
 # Qualità del codice
 npm run lint         # ESLint check
+
+# Lovable Integration
+npm run prepare-lovable  # Verifica completa pre-import
+npm run lovable:check    # Solo controlli senza output
 ```
 
 ## 🎨 Design System

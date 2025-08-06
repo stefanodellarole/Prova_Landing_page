@@ -64,6 +64,15 @@
       "component": "GDPRCompliancePage"
     }
   ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build", 
+    "build:dev": "vite build --mode development",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx",
+    "type-check": "tsc --noEmit",
+    "prepare-lovable": "npm run lovable:check"
+  },
   "compatibility": {
     "lovable": "^2.0.0",
     "node": ">=18.0.0",
