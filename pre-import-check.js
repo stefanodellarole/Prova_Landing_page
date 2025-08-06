@@ -59,8 +59,10 @@ try {
   // Check Vite configuration
   try {
     const viteConfig = fs.readFileSync('vite.config.ts', 'utf8');
+    const hasESMImports = viteConfig.includes('import tailwindcss') && viteConfig.includes('import autoprefixer');
     const hasRequire = viteConfig.includes('require(');
-    addCheck('Vite config (ESM)', !hasRequire, hasRequire ? 'WARNING: Uses require() - should use ESM' : 'Uses ESM imports only');
+    addCheck('Vite config (ES6)', hasESMImports && !hasRequire, 
+      hasESMImports ? 'Uses ES6 imports for PostCSS' : 'Missing ES6 imports for PostCSS plugins');
   } catch (error) {
     addCheck('Vite config file', false, 'vite.config.ts not found');
   }
