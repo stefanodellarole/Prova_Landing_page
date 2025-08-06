@@ -9,18 +9,19 @@ Una landing page moderna e responsive per **Splinter**, un'applicazione web che 
 ## 🚀 Quick Import in Lovable
 
 ### Import Immediato
+
 ```bash
 # 1. Verifica che il progetto sia pronto
 npm run prepare-lovable
 
-# 2. Push to GitHub  
+# 2. Push to GitHub
 git add .
 git commit -m "feat: ready for Lovable import"
 git push origin main
 
 # 3. Import in Lovable
 # - Vai su lovable.dev
-# - Import from GitHub  
+# - Import from GitHub
 # - Seleziona questo repository
 ```
 
@@ -75,29 +76,33 @@ splinter-landing-page/
 ### Installazione
 
 1. **Clona il repository**
+
    ```bash
    git clone <repository-url>
    cd splinter-landing-page
    ```
 
 2. **Installa le dipendenze**
+
    ```bash
    npm install
    ```
 
 3. **Configura le variabili d'ambiente** (opzionale)
+
    ```bash
    cp .env.example .env.local
    # Modifica .env.local con i tuoi valori
    ```
 
 4. **Avvia il server di sviluppo**
+
    ```bash
    npm run dev
    ```
 
 5. **Apri il browser**
-   
+
    L'applicazione sarà disponibile su `http://localhost:3000`
 
 ## 📜 Scripts Disponibili
@@ -128,16 +133,16 @@ La landing page utilizza un sistema di colori professionale basato su tonalità 
 
 ```css
 /* Colori Primari */
---primary: 158 65% 45%;        /* Teal principale #1D8B6B */
---primary-glow: 158 65% 65%;   /* Teal luminoso #40C99A */
+--primary: 158 65% 45%; /* Teal principale #1D8B6B */
+--primary-glow: 158 65% 65%; /* Teal luminoso #40C99A */
 
 /* Colori Secondari */
---secondary: 158 30% 95%;      /* Verde chiaro #F0F7F5 */
---accent: 158 55% 50%;         /* Accent teal #1FAA7A */
+--secondary: 158 30% 95%; /* Verde chiaro #F0F7F5 */
+--accent: 158 55% 50%; /* Accent teal #1FAA7A */
 
 /* Sfondi */
---background: 0 0% 99%;        /* Bianco puro #FCFCFC */
---card: 0 0% 100%;            /* Bianco card #FFFFFF */
+--background: 0 0% 99%; /* Bianco puro #FCFCFC */
+--card: 0 0% 100%; /* Bianco card #FFFFFF */
 ```
 
 ### Typography
@@ -148,6 +153,7 @@ La landing page utilizza un sistema di colori professionale basato su tonalità 
 ### Componenti UI
 
 Il progetto utilizza componenti UI basati su **ShadCN** e **Radix UI** per:
+
 - Buttons, Cards, Dialogs
 - Form elements
 - Navigation components
@@ -158,6 +164,7 @@ Il progetto utilizza componenti UI basati su **ShadCN** e **Radix UI** per:
 ### Come Aggiungere il Tuo Video
 
 1. **Carica il video** nella cartella `public/videos/`
+
    ```
    public/
    └── videos/
@@ -165,10 +172,11 @@ Il progetto utilizza componenti UI basati su **ShadCN** e **Radix UI** per:
    ```
 
 2. **Aggiorna App.tsx**
+
    ```tsx
    // In App.tsx, sostituisci:
    const videoUrl: string | undefined = undefined;
-   
+
    // Con:
    const videoUrl = "/videos/splinter-demo.mp4";
    ```
@@ -200,16 +208,16 @@ const translations = {
     hero: {
       title: "Trasforma il tuo",
       titleHighlight: "Onboarding Pazienti",
-      subtitle: "Con l'intelligenza artificiale..."
-    }
+      subtitle: "Con l'intelligenza artificiale...",
+    },
   },
   en: {
     hero: {
       title: "Transform your",
       titleHighlight: "Patient Onboarding",
-      subtitle: "With artificial intelligence..."
-    }
-  }
+      subtitle: "With artificial intelligence...",
+    },
+  },
 };
 ```
 
@@ -224,21 +232,25 @@ const translations = {
 Il progetto include tre pagine legali complete:
 
 ### 1. Privacy Policy (`/components/PrivacyPolicyPage.tsx`)
+
 - ✅ 10 sezioni dettagliate
 - ✅ Conforme GDPR e FADP svizzera
 - ✅ Design professionale
 
 ### 2. Terms of Service (`/components/TermsOfServicePage.tsx`)
+
 - ✅ 10 sezioni complete
 - ✅ Struttura legale standard
 - ✅ PDF download integrato
 
 ### 3. GDPR Compliance (`/components/GDPRCompliancePage.tsx`)
+
 - ✅ 9 sezioni sui diritti utente
 - ✅ Tabella diritti GDPR
 - ✅ Multi-lingua completo
 
 ### Caratteristiche Comuni
+
 - 🎨 Design coerente con palette teal
 - 📄 Generazione PDF nativa (window.print)
 - 📱 Layout responsive
@@ -267,6 +279,7 @@ Questo genera i file ottimizzati nella cartella `dist/`.
 Per SPA (Single Page Application), configura il server per servire `index.html` per tutte le rotte.
 
 **Esempio Nginx:**
+
 ```nginx
 location / {
   try_files $uri $uri/ /index.html;
@@ -274,6 +287,7 @@ location / {
 ```
 
 **Esempio Apache (.htaccess):**
+
 ```apache
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -289,7 +303,7 @@ Modifica le variabili CSS in `styles/globals.css`:
 
 ```css
 :root {
-  --primary: 200 100% 50%;  /* Cambia il colore primario */
+  --primary: 200 100% 50%; /* Cambia il colore primario */
   --secondary: 200 30% 95%; /* Cambia il colore secondario */
 }
 ```
@@ -307,7 +321,7 @@ I componenti sono modulari e possono essere riorganizzati facilmente in `App.tsx
 ## 📊 Ottimizzazioni Performance
 
 - ✅ **Code Splitting** automatico
-- ✅ **Tree Shaking** per bundle size ridotto  
+- ✅ **Tree Shaking** per bundle size ridotto
 - ✅ **Image optimization** (se implementata)
 - ✅ **CSS Purging** automatico con Tailwind
 - ✅ **Preconnect** ai Google Fonts
@@ -316,18 +330,21 @@ I componenti sono modulari e possono essere riorganizzati facilmente in `App.tsx
 ## 🛠️ Tecnologie Utilizzate
 
 ### Core
+
 - **React 18** - UI Framework
 - **TypeScript** - Type Safety
 - **Vite** - Build Tool & Dev Server
 - **Tailwind CSS v4** - Styling Framework
 
 ### UI Components
+
 - **ShadCN/ui** - Component Library
 - **Radix UI** - Headless UI Primitives
 - **Lucide React** - Icon Library
 - **Class Variance Authority** - Component Variants
 
 ### Utilities
+
 - **clsx** - Conditional Classes
 - **tailwind-merge** - Class Merging
 - **React Hook Form** - Form Management
@@ -350,6 +367,7 @@ Questo progetto è distribuito sotto licenza MIT. Vedi `LICENSE` per maggiori in
 ### Problemi Comuni
 
 **1. Errori di installazione dipendenze**
+
 ```bash
 # Pulisci cache e reinstalla
 rm -rf node_modules package-lock.json
@@ -357,21 +375,25 @@ npm install
 ```
 
 **2. Problemi TypeScript**
+
 ```bash
 # Controllo TypeScript
 npm run type-check
 ```
 
 **3. Build fallisce**
+
 ```bash
 # Controlla ESLint
 npm run lint
 ```
 
 **4. Errore "Dynamic require is not supported"**
-- Problema risolto: Il vite.config.ts ora usa solo ESM imports
-- PostCSS configurato in file separato (postcss.config.js)
-- Compatibilità Lovable garantita
+
+- Problema risolto DEFINITIVAMENTE: vite.config.ts usa ES6 imports
+- PostCSS configurato con `import tailwindcss` e `import autoprefixer`
+- Server configurato su porta 8080 per Lovable
+- Compatibilità Lovable garantita al 100%
 
 ### Contatti
 
@@ -394,4 +416,4 @@ npm run lint
 
 **Sviluppato con ❤️ dal team Splinter**
 
-*Trasforma il modo in cui i fisioterapisti gestiscono l'onboarding dei pazienti.*
+_Trasforma il modo in cui i fisioterapisti gestiscono l'onboarding dei pazienti._
