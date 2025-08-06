@@ -3,9 +3,9 @@ import { Card, CardContent } from './ui/card';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import splinterLogo from 'figma:asset/64bef5ec469a1db741d3a735f3fa95a4f771f716.png';
+// import splinterLogo from 'figma:asset/64bef5ec469a1db741d3a735f3fa95a4f771f716.png';
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -54,10 +54,8 @@ export function ContactSection() {
                 <>
                   {beforeSplinter}
                   <span className="inline-flex items-center gap-2">
-                    <img 
-                      src={splinterLogo} 
-                      alt="Splinter Logo" 
-                      className="w-6 h-6 inline-block"
+                    <Sparkles 
+                      className="w-6 h-6 inline-block text-teal-500" 
                       style={{
                         filter: 'brightness(1.05) saturate(1.1) drop-shadow(0 0 8px hsl(158, 65%, 58%, 0.3))',
                         animation: 'shimmer 3s ease-in-out infinite'
