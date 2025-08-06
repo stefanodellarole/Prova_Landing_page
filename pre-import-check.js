@@ -56,6 +56,15 @@ try {
   addCheck('Tailwind CSS', !!packageJson.devDependencies?.tailwindcss, packageJson.devDependencies?.tailwindcss || 'Missing');
   addCheck('Build:dev script', !!packageJson.scripts?.['build:dev'], packageJson.scripts?.['build:dev'] || 'Missing - required for Lovable');
   
+  // Check Vite configuration
+  try {
+    const viteConfig = fs.readFileSync('vite.config.ts', 'utf8');
+    const hasRequire = viteConfig.includes('require(');
+    addCheck('Vite config (ESM)', !hasRequire, hasRequire ? 'WARNING: Uses require() - should use ESM' : 'Uses ESM imports only');
+  } catch (error) {
+    addCheck('Vite config file', false, 'vite.config.ts not found');
+  }
+  
 } catch (error) {
   addCheck('Package.json parse', false, 'Invalid JSON');
 }
