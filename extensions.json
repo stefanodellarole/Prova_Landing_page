@@ -1,15 +1,3 @@
-{
-  "recommendations": [
-    "bradlc.vscode-tailwindcss",
-    "ms-vscode.vscode-typescript-next",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "ms-vscode.vscode-react-javascript-debug",
-    "formulahendry.auto-rename-tag",
-    "christian-kohler.path-intellisense",
-    "ms-vscode.vscode-json",
-    "yoavbls.pretty-ts-errors",
-    "bradlc.vscode-tailwindcss"
-  ],
-  "unwantedRecommendations": []
-}
+// This file should be in .vscode/extensions.json instead
+// VSCode extensions should be configured in .vscode/ folder, not in root
+// This file is redundant and will be removed
