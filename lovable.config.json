@@ -1,0 +1,73 @@
+{
+  "name": "splinter-landing-page",
+  "version": "1.0.0",
+  "description": "Splinter - Landing page per applicazione web per fisioterapisti con AI",
+  "framework": "react",
+  "buildTool": "vite",
+  "styling": "tailwindcss",
+  "typescript": true,
+  "entry": "App.tsx",
+  "publicDir": "public",
+  "buildDir": "dist",
+  "features": {
+    "multiLanguage": true,
+    "videoModal": true,
+    "legalPages": true,
+    "contactForm": true,
+    "responsiveDesign": true,
+    "seoOptimized": true
+  },
+  "dependencies": {
+    "ui": "shadcn/ui",
+    "icons": "lucide-react",
+    "forms": "react-hook-form",
+    "validation": "zod",
+    "charts": "recharts"
+  },
+  "structure": {
+    "components": "components/",
+    "contexts": "contexts/", 
+    "styles": "styles/",
+    "docs": "docs/"
+  },
+  "designSystem": {
+    "colorScheme": "teal-green",
+    "fonts": {
+      "heading": "Manrope",
+      "body": "DM Sans"
+    },
+    "brandColors": {
+      "primary": "hsl(158, 65%, 45%)",
+      "secondary": "hsl(158, 30%, 95%)",
+      "accent": "hsl(158, 55%, 50%)"
+    }
+  },
+  "pages": [
+    {
+      "name": "home",
+      "path": "/",
+      "components": ["HeroSection", "FeaturesSection", "BenefitsSection", "ContactSection"]
+    },
+    {
+      "name": "privacy",
+      "path": "/privacy",
+      "component": "PrivacyPolicyPage"
+    },
+    {
+      "name": "terms",
+      "path": "/terms", 
+      "component": "TermsOfServicePage"
+    },
+    {
+      "name": "gdpr",
+      "path": "/gdpr",
+      "component": "GDPRCompliancePage"
+    }
+  ],
+  "compatibility": {
+    "lovable": "^2.0.0",
+    "node": ">=18.0.0",
+    "react": "^18.2.0",
+    "tailwind": "^4.0.0"
+  }
+}

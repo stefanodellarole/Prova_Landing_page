@@ -1,0 +1,434 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  
+  /* Font families */
+  --font-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  
+  /* Text size variables */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  
+  /* 🎨 SPLINTER TEAL COLOR SYSTEM - LIGHT MODE */
+  
+  /* Base backgrounds */
+  --background: 0 0% 99%; /* Background Light: #FCFCFC */
+  --foreground: 210 15% 20%; /* Foreground Light: #2B333D */
+  
+  --card: 0 0% 100%; /* Card Light: #FFFFFF */
+  --card-foreground: 210 15% 20%; /* Same as foreground */
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 15% 20%;
+  
+  /* 🌊 PRIMARY TEAL - Brand color */
+  --primary: 158 65% 45%; /* Primary Teal: #1D8B6B */
+  --primary-foreground: 0 0% 100%; /* White text on teal */
+  --primary-glow: 158 65% 65%; /* Primary Glow Light: #40C99A */
+  
+  /* 🌿 SECONDARY TEAL - Backgrounds */
+  --secondary: 158 30% 95%; /* Secondary Light: #F0F7F5 */
+  --secondary-foreground: 158 65% 25%; /* Secondary Foreground Light: #0E5A42 */
+  
+  /* 🎯 ACCENT COLORS */
+  --accent: 158 55% 50%; /* Accent Light: #1FAA7A */
+  --accent-foreground: 0 0% 100%;
+  
+  /* 🔇 MUTED COLORS */
+  --muted: 210 10% 96%; /* Muted Light: #F4F5F6 */
+  --muted-foreground: 210 10% 60%; /* Muted Foreground Light: #91969B */
+  
+  /* 🚨 DESTRUCTIVE */
+  --destructive: 0 84% 60%; /* Destructive: #F04438 */
+  --destructive-foreground: 0 0% 100%;
+  
+  /* 🖼️ BORDERS & INPUTS */
+  --border: 210 15% 92%; /* Border Light: #E4E8EC */
+  --input: 210 15% 94%; /* Input Light: #EAEEF2 */
+  --input-background: 210 15% 94%; /* Same as input */
+  --switch-background: 210 10% 90%;
+  --ring: 158 65% 45%; /* Same as primary for focus states */
+  
+  /* 🌈 TEAL GRADIENTS */
+  --gradient-primary: linear-gradient(135deg, hsl(158, 65%, 45%), hsl(158, 65%, 65%));
+  --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 99%), hsl(158, 30%, 95%));
+  --gradient-card: linear-gradient(145deg, #FFFFFF, hsl(158, 20%, 98%));
+  --gradient-organic: linear-gradient(135deg, hsla(158, 45%, 90%, 0.3), hsla(158, 35%, 85%, 0.5));
+  
+  /* 💡 TEAL-TINTED SHADOWS */
+  --shadow-soft: 0 2px 8px hsl(158 25% 15% / 0.08);
+  --shadow-medium: 0 4px 16px hsl(158 25% 15% / 0.12);
+  --shadow-strong: 0 8px 24px hsl(158 25% 15% / 0.16);
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* 📊 CHART COLORS - Teal variations */
+  --chart-1: 158 65% 45%; /* Primary Teal */
+  --chart-2: 158 55% 50%; /* Accent Teal */
+  --chart-3: 158 65% 25%; /* Dark Teal */
+  --chart-4: 158 45% 60%; /* Light Teal */
+  --chart-5: 158 35% 70%; /* Very Light Teal */
+  
+  --radius: 0.625rem;
+  
+  /* 📦 SIDEBAR COLORS - Light Mode */
+  --sidebar: 0 0% 98%; /* Background: #FAFAFA */
+  --sidebar-foreground: 240 5.3% 26.1%; /* Foreground: #3F444A */
+  --sidebar-primary: 240 5.9% 10%; /* Primary: #181A1F */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 4.8% 95.9%; /* Accent: #F1F2F4 */
+  --sidebar-accent-foreground: 240 5.3% 26.1%;
+  --sidebar-border: 220 13% 91%; /* Border: #E1E5E9 */
+  --sidebar-ring: 217.2 91.2% 59.8%; /* Ring: #3B82F6 */
+}
+
+.dark {
+  /* 🌑 SPLINTER TEAL COLOR SYSTEM - DARK MODE */
+  
+  /* Base backgrounds */
+  --background: 158 25% 8%; /* Background Dark: #0F1A15 */
+  --foreground: 158 15% 95%; /* Foreground Dark: #F0F5F2 */
+  
+  --card: 158 20% 12%; /* Card Dark: #131F19 */
+  --card-foreground: 158 15% 95%;
+  
+  --popover: 158 20% 12%;
+  --popover-foreground: 158 15% 95%;
+  
+  /* 🌊 PRIMARY TEAL - Dark Mode */
+  --primary: 158 65% 60%; /* Primary Teal (Dark Mode): #2CAD85 */
+  --primary-foreground: 158 65% 25%; /* Dark teal text on light teal */
+  --primary-glow: 158 65% 80%; /* Primary Glow Dark: #66DDB3 */
+  
+  /* 🌿 SECONDARY TEAL - Dark Mode */
+  --secondary: 158 15% 18%; /* Secondary Dark: #262D2B */
+  --secondary-foreground: 158 65% 75%; /* Secondary Foreground Dark: #52E0AC */
+  
+  /* 🎯 ACCENT COLORS - Dark Mode */
+  --accent: 158 55% 65%; /* Accent Dark: #3FC59F */
+  --accent-foreground: 158 65% 25%;
+  
+  /* 🔇 MUTED COLORS - Dark Mode */
+  --muted: 158 15% 15%; /* Muted Dark: #1C2820 */
+  --muted-foreground: 158 10% 65%; /* Muted Foreground Dark: #9BA8A0 */
+  
+  /* 🚨 DESTRUCTIVE - Dark Mode */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 158 15% 95%;
+  
+  /* 🖼️ BORDERS & INPUTS - Dark Mode */
+  --border: 158 15% 20%; /* Border Dark: #263029 */
+  --input: 158 15% 20%; /* Input Dark: #263029 */
+  --input-background: 158 15% 15%;
+  --switch-background: 158 10% 25%;
+  --ring: 158 65% 60%; /* Focus ring matches primary dark */
+  
+  /* 🌈 TEAL GRADIENTS - Dark Mode */
+  --gradient-primary: linear-gradient(135deg, hsl(158, 65%, 60%), hsl(158, 65%, 80%));
+  --gradient-subtle: linear-gradient(180deg, hsl(158, 25%, 8%), hsl(158, 15%, 15%));
+  --gradient-card: linear-gradient(145deg, hsl(158, 20%, 12%), hsl(158, 20%, 14%));
+  --gradient-organic: linear-gradient(135deg, hsla(158, 35%, 20%, 0.4), hsla(158, 25%, 15%, 0.6));
+  
+  /* 💡 DARK MODE SHADOWS */
+  --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.4);
+  --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.5);
+  --shadow-strong: 0 8px 24px hsl(0 0% 0% / 0.6);
+  
+  /* 📊 CHART COLORS - Dark Mode Teal */
+  --chart-1: 158 65% 60%;
+  --chart-2: 158 55% 65%;
+  --chart-3: 158 45% 55%;
+  --chart-4: 158 50% 70%;
+  --chart-5: 158 40% 75%;
+  
+  /* 📦 SIDEBAR COLORS - Dark Mode */
+  --sidebar: 240 5.9% 10%; /* Background: #181A1F */
+  --sidebar-foreground: 240 4.8% 95.9%; /* Foreground: #F1F2F4 */
+  --sidebar-primary: 224.3 76.3% 48%; /* Primary: #1D4ED8 */
+  --sidebar-primary-foreground: 240 4.8% 95.9%;
+  --sidebar-accent: 240 3.7% 15.9%; /* Accent: #262A30 */
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 224.3 76.3% 48%;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-input-background: hsl(var(--input-background));
+  --color-switch-background: hsl(var(--switch-background));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-color: hsl(0 0% 99%) !important; /* Updated to new light background */
+    color: hsl(210 15% 20%) !important; /* Updated to new foreground */
+    font-family: var(--font-body); /* Default to DM Sans for body */
+  }
+}
+
+/**
+ * Typography system with custom fonts
+ * Manrope for headings and CTAs
+ * DM Sans for body text and UI elements
+ */
+@layer base {
+  /* Headings use Manrope */
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.2;
+      color: hsl(var(--foreground));
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.3;
+      color: hsl(var(--foreground));
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+    }
+
+    h4 {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+    }
+
+    h5 {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+    }
+
+    h6 {
+      font-family: var(--font-heading);
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+    }
+
+    /* Body text uses DM Sans */
+    p {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.6;
+      color: hsl(var(--foreground));
+    }
+
+    /* UI elements use DM Sans */
+    label {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: hsl(var(--foreground));
+    }
+
+    /* Buttons use Manrope (CTA elements) */
+    button {
+      font-family: var(--font-heading);
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      letter-spacing: -0.005em;
+      cursor: pointer;
+    }
+
+    /* Input elements use DM Sans */
+    input, textarea, select {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.4;
+    }
+
+    /* Navigation and small text use DM Sans */
+    nav, small {
+      font-family: var(--font-body);
+    }
+
+    /* Links use DM Sans */
+    a {
+      font-family: var(--font-body);
+      font-weight: var(--font-weight-medium);
+    }
+  }
+}
+
+/* Utility classes for explicit font control */
+.font-heading {
+  font-family: var(--font-heading) !important;
+}
+
+.font-body {
+  font-family: var(--font-body) !important;
+}
+
+/* Specific typography combinations */
+.text-header {
+  font-family: var(--font-heading) !important;
+  font-weight: var(--font-weight-semibold) !important; /* 600 - Semibold */
+}
+
+.text-descriptive {
+  font-family: var(--font-body) !important;
+  font-weight: var(--font-weight-normal) !important; /* 400 - Regular */
+}
+
+.text-cta-primary {
+  font-family: var(--font-heading) !important;
+  font-weight: var(--font-weight-bold) !important; /* 700 - Bold */
+  letter-spacing: -0.005em;
+}
+
+.text-cta-secondary {
+  font-family: var(--font-body) !important;
+  font-weight: var(--font-weight-normal) !important; /* 400 - Regular */
+}
+
+.text-tooltip {
+  font-family: var(--font-body) !important;
+  font-weight: var(--font-weight-medium) !important; /* 500 - Medium */
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Force light mode - remove dark class if accidentally applied */
+html.dark {
+  filter: none;
+}
+
+/* Ensure main content is visible with new teal theme */
+.min-h-screen {
+  background-color: hsl(0 0% 99%) !important; /* Updated to new light background */
+  color: hsl(210 15% 20%) !important; /* Updated to new foreground */
+}
+
+/* 🎨 Additional utility classes for Splinter Teal system */
+.bg-primary-glow {
+  background-color: hsl(var(--primary-glow));
+}
+
+.text-primary-glow {
+  color: hsl(var(--primary-glow));
+}
+
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-subtle {
+  background: var(--gradient-subtle);
+}
+
+.gradient-card {
+  background: var(--gradient-card);
+}
+
+.gradient-organic {
+  background: var(--gradient-organic);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-medium {
+  box-shadow: var(--shadow-medium);
+}
+
+.shadow-strong {
+  box-shadow: var(--shadow-strong);
+}
+
+/* 🌟 Shimmer animation for text effects */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+    filter: drop-shadow(0 0 8px hsl(158, 65%, 58%, 0.3));
+  }
+  50% {
+    background-position: 200% 0;
+    filter: drop-shadow(0 0 16px hsl(158, 65%, 58%, 0.6)) drop-shadow(0 0 24px hsl(158, 65%, 45%, 0.4));
+  }
+  100% {
+    background-position: -200% 0;
+    filter: drop-shadow(0 0 8px hsl(158, 65%, 58%, 0.3));
+  }
+}
